@@ -1,0 +1,308 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DE3D5BDE-7348-4DF0-92CE-147749144778}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MedicalService</RootNamespace>
+    <AssemblyName>MedicalService</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="commonTDS.cs">
+      <DependentUpon>commonTDS.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="commonTDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>commonTDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="common\commonClass.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDesign\bloodgrp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDesign\bloodgrp.Designer.cs">
+      <DependentUpon>bloodgrp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDesign\ChildGinfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDesign\ChildGinfo.Designer.cs">
+      <DependentUpon>ChildGinfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDesign\child_general_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDesign\child_general_info.Designer.cs">
+      <DependentUpon>child_general_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDesign\DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormDesign\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormDesign\Doctors_Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDesign\Doctors_Profile.Designer.cs">
+      <DependentUpon>Doctors_Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDesign\Doctor_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDesign\Doctor_Login.Designer.cs">
+      <DependentUpon>Doctor_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDesign\Get_Schedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDesign\Get_Schedule.Designer.cs">
+      <DependentUpon>Get_Schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDesign\manu111.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDesign\manu111.Designer.cs">
+      <DependentUpon>manu111.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDesign\Menue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDesign\Menue.Designer.cs">
+      <DependentUpon>Menue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDesign\Mother general info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDesign\Mother general info.Designer.cs">
+      <DependentUpon>Mother general info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDesign\Note.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDesign\Note.Designer.cs">
+      <DependentUpon>Note.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDesign\OldPatientLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDesign\OldPatientLogin.Designer.cs">
+      <DependentUpon>OldPatientLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDesign\Create_Patient_Account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDesign\Create_Patient_Account.Designer.cs">
+      <DependentUpon>Create_Patient_Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDesign\Patient info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDesign\Patient info.Designer.cs">
+      <DependentUpon>Patient info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDesign\Patient serial list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDesign\Patient serial list.Designer.cs">
+      <DependentUpon>Patient serial list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDesign\Patient_Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDesign\Patient_Profile.Designer.cs">
+      <DependentUpon>Patient_Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDesign\Prescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDesign\Prescription.Designer.cs">
+      <DependentUpon>Prescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDesign\Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDesign\Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDesign\View_prescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDesign\View_prescription.Designer.cs">
+      <DependentUpon>View_prescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDesign\bloodgrp.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>bloodgrp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDesign\child_general_info.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>child_general_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDesign\Doctors_Profile.resx">
+      <DependentUpon>Doctors_Profile.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDesign\Doctor_Login.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Doctor_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDesign\Get_Schedule.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Get_Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDesign\manu111.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>manu111.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDesign\Menue.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Menue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDesign\Mother general info.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Mother general info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDesign\Note.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Note.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDesign\OldPatientLogin.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OldPatientLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDesign\Create_Patient_Account.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Create_Patient_Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDesign\Patient info.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Patient info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDesign\Patient serial list.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Patient serial list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDesign\Patient_Profile.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Patient_Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDesign\Prescription.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Prescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDesign\Test.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDesign\View_prescription.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>View_prescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="commonTDS.xsc">
+      <DependentUpon>commonTDS.xsd</DependentUpon>
+    </None>
+    <None Include="commonTDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>commonTDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="commonTDS.xss">
+      <DependentUpon>commonTDS.xsd</DependentUpon>
+    </None>
+    <None Include="FormDesign\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FormDesign\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="FormDesign\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Resources\logo.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
